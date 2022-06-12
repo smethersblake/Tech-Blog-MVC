@@ -10,6 +10,7 @@
     "sequelize": "^6.20.1"
   },
   "scripts": {
+    "seeds": "node seeds/index.js",
     "start": "node server.js"
   },
   "name": "tech-blog-mvc",
