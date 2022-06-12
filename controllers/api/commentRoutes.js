@@ -1,5 +1,6 @@
 const router = require("express").Router()
 const { Comment } = require("../../models")
+const withAuth = require("../../utils/auth")
 
 router.get("/", (req, res) => 
 {
@@ -11,7 +12,7 @@ router.get("/", (req, res) =>
         res.status(500).json(err)
     })
 })
-router.post("/", (req, res) => 
+router.post("/", withAuth, (req, res) => 
 {
     Comment.create(
     {
@@ -26,7 +27,7 @@ router.post("/", (req, res) =>
         res.status(400).json(err)
     })
 })
-router.delete("/:id", (req, res) => 
+router.delete("/:id", withAuth, (req, res) => 
 {
     Comment.destroy(
     {
