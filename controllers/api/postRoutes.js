@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
         {
             if (!dbPostData)
             {
-                res.status(404).json({ message: `no posts with this id` })
+                res.status(404).json({ message: 'no posts with this id' })
                 return
             }
             res.json(dbPostData)

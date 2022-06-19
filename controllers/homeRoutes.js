@@ -10,6 +10,7 @@ router.get('/', (req, res) =>
             'id',
             'title',
             'created_at',
+            'content'
         ],
         include: [
             {
@@ -57,6 +58,7 @@ router.get('/post/:id', (req, res) =>
             'id',
             'created_at',
             'title',
+            'content'
         ],
         include: [
             {
@@ -72,7 +74,7 @@ router.get('/post/:id', (req, res) =>
                 attributes: ['username']
             }
         ]
-    })
+            })
     .then(dbPostData =>
         {
             if (!dbPostData)

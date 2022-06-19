@@ -13,6 +13,7 @@
     </div>
 </article>
 {{#if loggedIn}}
+{{!-- {{> comments post.comment}} --}}
 <form class="comment-form">
     <div>
         <textarea name="comment-body"></textarea>
@@ -21,9 +22,10 @@
         <button type="submit">add comment</button>
     </div>
 </form>
+{{> comments comments}}
 {{/if}}
-{{> comments post.comments}}
-<div class="comments">
+
+{{!-- <div class="comments">
     {{#each post.comments}}
     <section class="comment">
         <div class="meta">
@@ -33,8 +35,8 @@
             {{comment_text}}
         </div>
     </section>
-    {{/each}}
-</div>
+{{/each}}
+</div> --}}
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
