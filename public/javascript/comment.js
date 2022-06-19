@@ -19,7 +19,6 @@ async function commentFormHandler (event)
             
             
         }) 
-        // console.log(response);
         if (response.ok)
         {
             document.location.reload()
